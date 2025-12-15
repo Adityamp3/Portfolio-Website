@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "General Sans";
+    font-family: "Be Vietnam Pro";
 }
 
 a{
@@ -20,36 +20,36 @@ html, body{
 #minicircle{
     position: absolute;
     z-index: 99999;
-    /* opacity: 0.5; */
     height: 20px;
     width: 20px;
     transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     background-color: #fff;
     border-radius: 50%;
-
+    pointer-events: none;
 }
 
 .bounding{
     width: fit-content;
     overflow: hidden;
-    /* background-color: red; */
 }
 .bounding .boundinglem{
+    font-family: 'General Sans';
     transform: translateY(100%);
+}
+#thirdh1{
+    font-family: 'Be Vietnam Pro';
 }
 
 #main{
-    width: 100%;
+    width: 100vw;
 }
 
 #hero{
     position: relative;
     width: 100%;
     color: #fff;
-    /* border: 1px solid red; */
     height: 100vh;
     background-color: black;
-    
 }
 
 #nav{
@@ -65,11 +65,32 @@ html, body{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    font-family: 'Afacad';
+}
+#nav h4{
+    font-family: 'Afacad';
 }
 
 #heading{
     margin-top: 90px;
     text-transform: uppercase;
+}
+.gradient-text {
+    /* font-size: 9vw; */
+    /* font-weight: 900; */
+    /* text-transform: uppercase; */
+
+    background-image: url("color-grad.webp"); /* can be GIF or image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* for Firefox */
+    background-clip: text;
+    color: transparent;
 }
 #heading h1{
     font-weight: 900;
@@ -105,6 +126,8 @@ html, body{
     text-align: right;
     margin-top: 0.8vw;
     font-size: 1.1vw; 
+    font-family: 'Be Vietnam Pro';
+    font-weight: 400;
 }
 #herofooter{
     bottom: 3%;
@@ -149,13 +172,13 @@ html, body{
     margin-left: 3vw;
     padding: 3.4vw 0vw;
     padding-right: 0;
-    /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid #888;
 }
 .elem h1{
+    font-family: 'General Sans';
     font-size: 7vw;
     opacity: 0.6;
 }
@@ -172,31 +195,36 @@ html, body{
 }
 
 #about{
-    width: 100%;
+    width: 100vw;
     color: #fff;
     display: flex;
     align-items: center;
     gap: 80px;
     padding: 10vw 10vw;
     padding-top: 20vw;
-    padding-left: 37.5vw;
-    /* border: 1px solid red; */
+    align-items: center;
 }
 #about img{
     width: 240px;
+    border-radius: 50%;
 }
 #textabout{
-    /* background-color: rgba(186, 117, 117, 0.832); */
-    width: 31rem;
+    min-width: 50%;
+    max-width: 80%;
     text-align: justify;
 }
 #textabout h5{
     opacity: 0.6;
     text-transform: uppercase;
     margin-bottom: 3px;
+    font-weight: 400;
+    padding: 10px 0;
+    font-family: 'Afacad';
+    font-size: 18px;
 }
 #textabout p{
     font-size: 18px;
+    font-family: 'Be Vietnam Pro';
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -225,6 +253,9 @@ html, body{
 #subscribe h5{
     opacity: 0.6;
     margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Afacad';
 }
 
 #footer{
@@ -238,14 +269,275 @@ html, body{
     display: flex;
     gap: 25px;
 }
+#footerleft h4{
+    font-weight: 300;
+    color: #888;
+    font-size: 18px;
+    font-family: 'Afacad';
+}
 #footerright{
     display: flex;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     gap: 50px;
 }
 #footerright a{
+    font-family: 'Afacad';
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+}
+
+.colon {
+  display: inline-block;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
+/* ==================== MOBILE RESPONSIVE STYLES ==================== */
+
+@media (max-width: 768px) {
+    
+    /* Hide custom cursor on mobile */
+    #minicircle {
+        display: none;
+    }
+    
+    /* Navigation */
+    #nav {
+        padding: 15px 20px;
+    }
+    
+    #nav a {
+        font-size: 14px;
+    }
+    
+    #nav h4 {
+        font-size: 14px;
+    }
+    
+    /* Hero Section */
+    #heading {
+        margin-top: 60px;
+    }
+    
+    #heading h1 {
+        font-size: 15vw;
+        margin-left: 20px;
+    }
+    
+    #heading #secondh1 {
+        margin-left: 20px;
+    }
+    
+    .blocktext h5 {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+    
+    #chotiheading {
+        margin-top: 80px;
+        padding-right: 20px;
+    }
+    
+    #chotiheading h5 {
+        font-size: 3vw;
+        margin-top: 2vw;
+    }
+    
+    /* Hero Footer */
+    #herofooter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0 20px;
+        bottom: 5%;
+    }
+    
+    #herofooter a {
+        font-size: 14px;
+    }
+    
+    #herofooter #iconset {
+        align-self: flex-end;
+    }
+    
+    /* Second Section - Projects */
+    #second {
+        height: auto;
+        padding-top: 10vh;
+        padding-bottom: 2vh;
+    }
+    
+    .elem {
+        width: 90%;
+        margin-left: 5vw;
+        padding: 5vw 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .elem h1 {
+        font-size: 12vw;
+    }
+    
+    .elem h5 {
+        font-size: 3.5vw;
+    }
+    
+    .elem img {
+        display: none; /* Hide hover images on mobile */
+    }
+    
+    /* About Section */
+    #about {
+        flex-direction: column;
+        gap: 30px;
+        padding: 15vw 5vw;
+        padding-top: 20vw;
+    }
+    
+    #about img {
+        width: 150px;
+    }
+    
+    #textabout {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    #textabout p {
+        font-size: 16px;
+        text-align: left;
+    }
+    
+    #textabout a {
+        display: inline-block;
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    #textabout h5 {
+        font-size: 14px;
+    }
+    
+    /* Subscribe Section */
+    #subscribe {
+        padding: 20px;
+        margin-bottom: 60px;
+    }
+    
+    #subscribe h4 {
+        font-size: 16px;
+    }
+    
+    #subscribe h5 {
+        font-size: 12px;
+    }
+    
+    /* Footer */
+    #footer {
+        flex-direction: row;
+        gap: 30px;
+        padding: 30px 20px;
+        align-items: flex-start;
+    }
+    
+    #footerleft {
+        flex-direction: column;
+        gap: 10px;
+        margin: auto 0;
+
+    }
+    
+    #footerleft h4 {
+        font-size: 14px;
+        font-weight: 300;
+        font-family: 'Afacad';
+        color: #888;
+    }
+    #footerleft h5 {
+        font-size: 10px;
+        font-weight: 300;
+    }
+    
+    #footerright {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+        
+    }
+    #footerright a{
+        font-size: 16px;
+        font-family: 'Afacad';
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    
+    #heading h1 {
+        font-size: 12vw;
+    }
+    #thirdh1{
+        font-size: 3vw;
+        font-weight: 200;
+        padding-right: 0;
+    }
+    
+    #chotiheading h5 {
+        font-size: 3vw;
+        font-family: 'Be Vietnam Pro';
+    }
+    
+    .elem h1 {
+        font-size: 14vw;
+    }
+    
+    .elem h5 {
+        font-size: 4vw;
+    }
+    
+    #about img {
+        width: 120px;
+    }
+    
+    #textabout p {
+        font-size: 14px;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    #heading h1 {
+        font-size: 12vw;
+    }
+    
+    #heading #secondh1 {
+        margin-left: 100px;
+    }
+    
+    .elem h1 {
+        font-size: 8vw;
+    }
+    
+    #about {
+        gap: 50px;
+        padding: 8vw 8vw;
+    }
+    
+    #about img {
+        width: 200px;
+    }
 }
